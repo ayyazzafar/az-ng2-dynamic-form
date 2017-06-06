@@ -1,6 +1,6 @@
 import { Component, state, animate,  OnInit, Input, transition, keyframes, style, trigger} from '@angular/core';
 
-import { FieldBase } from "app/az-ng2-dynamic-form/models/FieldBase";
+import { FieldBase } from "../models/FieldBase"; 
 import { FormGroup } from "@angular/forms";
 
 @Component({
