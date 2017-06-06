@@ -51,7 +51,7 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   templateUrl: './app.component.html',
 })
-export class ContactComponent {
+export class AppComponent {
   fields:FieldBase<any>[] = [];
   constructor() {
      this.fields= [
