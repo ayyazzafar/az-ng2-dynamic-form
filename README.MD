@@ -47,6 +47,9 @@ Prepare list of required fields
 ```typescript
 import { Component } from '@angular/core';
 
+import { FieldBase } from "az-ng2-dynamic-form/models/FieldBase";
+import { FieldTextbox } from "az-ng2-dynamic-form/models/field-textbox";
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
