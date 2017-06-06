@@ -25,7 +25,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 // Import your library
-import { SampleModule } from 'az-ng2-dynamic-form';
+import { AzNg2DynamicFormModule } from 'az-ng2-dynamic-form';
 
 @NgModule({
   declarations: [
@@ -35,7 +35,7 @@ import { SampleModule } from 'az-ng2-dynamic-form';
     BrowserModule,
 
     // Specify your library as an import
-    LibraryModule
+    AzNg2DynamicFormModule
   ],
   providers: [],
   bootstrap: [AppComponent]
@@ -47,10 +47,8 @@ Once your library is imported, you can use its components, directives and pipes 
 
 ```xml
 <!-- You can now use your library component in app.component.html -->
-<h1>
-  {{title}}
-</h1>
-<sampleComponent></sampleComponent>
+
+<az-ng2-dynamic-form></az-ng2-dynamic-form>
 ```
 
 ## Development
@@ -69,4 +67,4 @@ $ npm run lint
 
 ## License
 
-MIT © [Ayyaz](mailto:ayyaz.zaffar@gmail.com)
+MIT © [Ayyaz](mailto:contact@ayyaz.io)

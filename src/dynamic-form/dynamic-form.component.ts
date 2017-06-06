@@ -6,7 +6,7 @@ import {FieldControlService} from "../field-control.service";
 
 
 @Component({
-  selector: 'dynamic-form',
+  selector: 'az-ng2-dynamic-form',
   templateUrl: './dynamic-form.component.html',
   styleUrls: ['./dynamic-form.component.scss'],
   providers:[FieldControlService]
