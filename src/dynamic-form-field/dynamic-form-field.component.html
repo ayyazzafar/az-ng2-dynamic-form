@@ -1,0 +1,18 @@
+<div [formGroup]="form">
+
+
+  <div *ngIf="material">
+    <md-input-container class="example-full-width show">
+      <input [type]="field.type"   *ngIf="field.controlType=='textbox' && field.type=='text'"  [formControlName]="field.key" [id]="field.key" mdInput [placeholder]="field.label">
+
+
+       <textarea [type]="field.type"   *ngIf="field.controlType=='textbox'  && field.type=='textarea'" [formControlName]="field.key" [id]="field.key" mdInput [placeholder]="field.label" [attr.rows]="field.rows"></textarea>
+
+       
+    </md-input-container>
+  </div>
+  <div [@itemEnter]="form.controls[field.key].touched && !form.controls[field.key].valid?'active':'hidden'" class="errorMessage" *ngIf="form.controls[field.key].touched && !form.controls[field.key].valid">
+    {{field.label}} is required.
+  </div>
+  
+</div>

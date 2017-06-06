@@ -1,0 +1,13 @@
+<form action="" (submit)="onSubmit()" [formGroup]="form">
+  <ng-content></ng-content>
+  <df-field *ngFor="let field of fields" [ngClass]="field.containerClasses" [material]="material" [field]="field" [form]="form"></df-field>
+
+  <button md-raised-button type="submit" class="pull-right">
+                    Submit
+                  
+  </button>
+
+  <div *ngIf="payload" class="form-row">
+    <strong>Saved the following values</strong><br>{{payload}}
+  </div>
+</form>
