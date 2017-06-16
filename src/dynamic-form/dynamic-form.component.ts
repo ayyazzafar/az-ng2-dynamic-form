@@ -1,7 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import {FormGroup} from "@angular/forms";
 
-import {FieldBase} from "../models/FieldBase";
+import {FieldBase} from "../models/field-base";
 import {FieldControlService} from "../field-control.service";
 
 
@@ -13,8 +13,11 @@ import {FieldControlService} from "../field-control.service";
 })
 export class DynamicFormComponent implements OnInit {
 
+  @Output() onSubmit:EventEmitter<FormGroup> = new EventEmitter();
   @Input() fields:FieldBase<any>[] = [];
   @Input() material:boolean = false;
+  @Input() theme:string = 'primary';
+  @Input() processing:boolean = false;
   
   constructor(private fcs: FieldControlService) { }
 
@@ -26,7 +29,8 @@ export class DynamicFormComponent implements OnInit {
     
   }
 
-  onSubmit(){
+  onFormSubmit(){
+    this.onSubmit.emit(this.form);
     this.payload = JSON.stringify(this.form.value);
   }
 

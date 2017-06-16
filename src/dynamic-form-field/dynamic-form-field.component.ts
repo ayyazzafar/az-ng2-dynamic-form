@@ -1,6 +1,6 @@
 import { Component, state, animate,  OnInit, Input, transition, keyframes, style, trigger} from '@angular/core';
 
-import { FieldBase } from "../models/FieldBase"; 
+import { FieldBase } from "../models/field-base"; 
 import { FormGroup } from "@angular/forms";
 
 @Component({
@@ -34,6 +34,8 @@ export class DynamicFormFieldComponent implements OnInit {
   constructor() { }
   @Input() field:FieldBase<any>;
   @Input() form:FormGroup;
+  @Input() processing:boolean;
+  @Input() theme:boolean;
   @Input() material:boolean=false;
   ngOnInit() {
   }

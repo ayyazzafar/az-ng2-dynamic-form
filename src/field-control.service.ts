@@ -1,7 +1,7 @@
 import {Injectable} from "@angular/core";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 
-import {FieldBase} from "./models/FieldBase";
+import {FieldBase} from "./models/field-base";
 
 @Injectable()
 export class FieldControlService{

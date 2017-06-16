@@ -1,4 +1,4 @@
-import {FieldBase} from "./FieldBase";
+import {FieldBase} from "./field-base";
 
 export class FieldTextbox extends FieldBase<string>{
     controlType = 'textbox';
